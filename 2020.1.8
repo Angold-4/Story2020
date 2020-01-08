@@ -1,0 +1,462 @@
+#Python
+#try to print:
+#..............
+#********* j < row-i
+#********
+#*******
+#******
+#*****
+#****
+#***
+#**
+#*
+
+###########################
+row=int(input("please enter your rows:"))
+#while function
+
+print("while function")
+
+i=0
+while i < row:
+    j=0
+    while j < row - i:
+        print("*",end="")
+        j+=1
+    print()
+    i+=1
+
+#for in function
+
+print("for in function")
+
+for p in range (row):
+    for _ in range (row - p):
+        print("*",end="")
+    print()
+    
+###########################
+
+#try to print:
+#        *
+#       **
+#      ***
+#     ****
+#    *****
+#   ******
+#  *******
+# ********
+#*********
+
+############################
+
+#while function:
+
+print("while function")
+
+a=0
+while a < row:
+    b=0
+    while b < row:
+        if b < row-a-1:
+            print(" ",end="")
+        else:
+            print("*",end="")
+        b+=1
+    print()
+    a+=1
+
+#for in function:
+
+print("for in function")
+
+for c in range(row):
+    for d in range(row):
+        if d < row -c- 1:
+            print(" ",end="")
+        else:
+            print("*",end="")
+    print()
+
+
+###############################
+#try to print:
+#    *    2x0+1
+#   ***   2x1+1
+#  *****  2x2+1
+# ******* 2x3+1
+#*********2x4+1
+#..............   2n+1
+
+################################
+
+#for in function:
+
+print("for in function")
+
+for e in range(row):
+    for f in range(row - e - 1):
+        print(" ",end="")
+    for f in range(2 * e + 1):
+        print("*",end="")
+    print()
+
+#WANGE try while function
+
+print("Try while function")
+print("wange fight")
+
+g = 0
+while g < row:
+    h = 0
+    while h < row - g - 1 :
+        print(" ",end="")
+        h += 1
+    h = 0
+    while h < 2 * g + 1:
+        print("*",end="")
+        h += 1
+    g += 1
+    print()
+
+
+################################
+#try to print:
+#...............
+#********* -2*n+2*row-1 
+# *******
+#  *****
+#   ***
+#    *
+
+
+###############################
+
+#for in function
+
+print("for in function")
+
+for k in range (row):
+    for l in range (k):
+        print(" ",end="")
+    for l in range (-(2*k)+2*row-1):
+        print("*",end="")
+    print()
+
+
+#while function
+
+print("while function")
+
+m=0
+while m < row:
+    n=0
+    while n < m:
+        print(" ",end="")
+        n += 1
+    n=0
+    while n < (-2*m)+2*row-1:
+        print("*",end="")
+        n += 1
+    print()
+    m += 1
+#finish
+        
+//C
+//
+//  main.c
+//  王哥的C语言库
+//
+//  Created by yy on 2019/11/20.
+//  Copyright © 2019 MW. All rights reserved.
+//
+#include "stdio.h"
+int main()
+{
+    int a;
+    printf("请输入行数：");
+    scanf("%d",&a);
+    printf("for function\n");
+    for (int b = 0;b < a ;b = b + 1)
+    {
+        for (int c = 0;c <= b;c = c + 1)
+        {
+            printf("*");
+        
+        }
+        printf("\n");
+    }
+    for (int d = 0; d < a; d = d + 1)
+    {
+        for (int e = 0; e < a-d ; e = e + 1)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int f = 0;f < a;f = f + 1)
+    {
+        for (int g = 0;g < a;g = g + 1)
+        {
+            if (g < a - f - 1)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    for (int h = 0; h < a;h = h + 1)
+    {
+        for (int i = 0; i < a; i = i + 1)
+        {
+            if (i < h)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("*");
+            }
+        }
+        printf("\n");
+        
+    }
+    for (int j = 0;j < a;j = j + 1)
+    {
+        for (int k = 0; k < a - 1 - j;k = k + 1 )
+        {
+            printf(" ");
+        }
+        for (int l = 0; l < 2*j + 1; l = l + 1)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    for (int m = 0; m < a;m = m + 1)
+    {
+        for (int n = 0;n < m;n = n + 1)
+        {
+            printf(" ");
+        }
+        for (int o = 0;o < 2*(a-m)-1; o = o + 1)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    printf("while function\n");
+    int p = 0;
+    while (p < a)
+    {
+        int q = 0;
+        while (q <= p)
+        {
+            printf("*");
+            q ++;
+        }
+        p ++;
+        printf("\n");
+    }
+    int r = 0;
+    while (r < a)
+    {
+        int s = 0;
+        while (s < a - r)
+        {
+            printf("*");
+            s ++;
+        }
+        r ++;
+        printf("\n");
+    }
+    int t = 0;
+    while (t < a)
+    {
+        int u = 0;
+        while (u < a)
+        {
+            if (u < a - t - 1)
+            {
+                printf(" ");
+                u ++;
+            }
+            else
+            {
+                printf("*");
+                u ++;
+            }
+        }
+        t ++;
+        printf("\n");
+    }
+    int v = 0;
+    while (v < a)
+    {
+        int w = 0;
+        while (w < a)
+        {
+            if (w < v)
+            {
+                printf(" ");
+                w ++;
+            }
+            else
+            {
+                printf("*");
+                w ++;
+            }
+        }
+        v ++;
+        printf("\n");
+    }
+    int x = 0;
+    while ( x < a)
+    {
+        int y = 0;
+        while (y < a - x - 1)
+        {
+            printf(" ");
+            y ++;
+        }
+        int z = 0;
+        while (z < 2*x + 1)
+        {
+            printf("*");
+            z ++;
+        }
+        x ++;
+        printf("\n");
+    }
+    int wg = 0;
+    while (wg < a)
+    {
+        int keep = 0;
+        while (keep < wg)
+        {
+            printf(" ");
+            keep ++;
+        }
+        int fight = 0;
+        while (fight < 2*(a-wg)-1)
+        {
+            printf("*");
+            fight ++;
+        }
+        wg ++;
+        printf("\n");
+    }
+    int c;
+    c = getchar();
+    while (c != EOF)
+    {
+        putchar(c);
+        c = getchar();
+        printf("EOF is %d\n",EOF);
+    }
+}
+//*
+//**
+//***
+//****
+//*****
+//******
+//*******
+//********
+//********
+//*******
+//******
+//*****
+//****
+//***
+//**
+//*
+//       *
+//      **
+//     ***
+//    ****
+//   *****
+//  ******
+// *******
+//********
+//********
+// *******
+//  ******
+//   *****
+//    ****
+//     ***
+//      **
+//       *
+//       *
+//      ***
+//     *****
+//    *******
+//   *********
+//  ***********
+// *************
+//***************
+//***************
+// *************
+//  ***********
+//   *********
+//    *******
+//     *****
+//      ***
+//       *
+//while function
+//*
+//**
+//***
+//****
+//*****
+//******
+//*******
+//********
+//********
+//*******
+//******
+//*****
+//****
+//***
+//**
+//*
+//       *
+//      **
+//     ***
+//    ****
+//   *****
+//  ******
+// *******
+//********
+//********
+// *******
+//  ******
+//   *****
+//    ****
+//     ***
+//      **
+//       *
+//       *
+//      ***
+//     *****
+//    *******
+//   *********
+//  ***********
+// *************
+//***************
+//***************
+// *************
+//  ***********
+//   *********
+//    *******
+//     *****
+//      ***
+//       *
+
+
+
+

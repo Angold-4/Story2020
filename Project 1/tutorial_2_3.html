@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 2.3</title>
+</head>
+<body>
+	<p id="a"></p>
+	<script type="text/javascript">
+		var x = 0;
+		var total = 0;
+		var count;
+		for (count = 0; count < 10; count ++){
+			x += 1;
+			total += x;
+		}
+		document.getElementById('a').innerHTML = total;
+	</script>
+</body>
+</html>

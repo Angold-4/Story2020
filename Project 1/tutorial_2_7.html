@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 2.7</title>
+</head>
+<body>
+	<p>Please enter a number:</p>
+	<p id = "b"></p>
+	<form oninput="w()">
+		<input type="text" name="a" id ="a">
+	</form>
+	<script type="text/javascript">
+		function w() {
+			var x = parseInt(document.getElementById('a').value);
+			var y = x % 2;
+			var z;
+			switch (y) {
+			    case 0:
+			        z = "This is an even number";
+			        break;
+			    case 1:
+			        z = "This is an odd number";
+			        break;
+			    default:
+			        z = "Please enter an integer!!";
+			}
+		    document.getElementById('b').innerHTML = z;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 2.6</title>
+</head>
+<body>
+	<p id = 'a'></p>
+	<script type="text/javascript">
+		var n;
+		var text = ' ';
+		for (n = 19; n > 0; n --){
+			var m = n % 2;
+			if (m == 1) {
+				text += "<br>" +n;
+			}
+		}
+		document.getElementById('a').innerHTML = text;
+	</script>
+	
+</body>
+</html>

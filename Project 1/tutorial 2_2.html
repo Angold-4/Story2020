@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 2.2</title>
+</head>
+<body>
+	<p>Check whether your number is odd or even</p>
+	<p>Please enter your number:</p>
+	<form oninput="g()">
+		<input type="text" name="a" id="a">
+	</form>
+	<script type="text/javascript">
+		function g(){
+			var x = parseInt(document.getElementById('a').value);
+			var y = x % 2;
+			var z;
+			if (y == 1) {
+				z = "This is an odd number!";
+			} else if (y == 0) {
+				z = "This is an even number!";
+			}
+			document.getElementById('b').innerHTML = z;
+		}
+	</script>
+	<p id="b"></p>
+</body>
+</html>

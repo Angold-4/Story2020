@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 2.5</title>
+</head>
+<body>
+	<p>Click to see the even integer between 2 - 100:</p>
+	<button onclick="w()">Click Me!</button>
+	<p id = 'a'></p>
+	<script type="text/javascript">
+		function w() {
+			var text = " ";
+			var even = " ";
+			var n = 1;
+			do {
+				var x = n % 2;
+				if (x == 0) {text += "<br>" +n;}
+				n ++;
+			}
+			while (n < 101);
+			document.getElementById("a").innerHTML = text;
+		}
+	</script>
+	
+</body>
+</html>

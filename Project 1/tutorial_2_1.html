@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 2-1</title>
+</head>
+<body>
+	<p id="c"></p>
+	<form oninput=w()>
+	<input type="number" name="a" id="a" >
+	+<input type="number" name="b" id="b" >
+	<p id="f"></p>
+	</form>
+	<script type="text/javascript">
+		document.getElementById('c').innerHTML = "Please Enter the number:"
+		function w(){
+			var g = parseInt(document.getElementById("a").value);
+			var h = parseInt(document.getElementById("b").value);
+			var j = g + h;
+			document.getElementById("f").innerHTML = "=" +j;}
+	</script>
+</body>
+</html>

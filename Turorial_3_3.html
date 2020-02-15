@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 3.3</title>
+</head>
+<body>
+	<h1>Please enter the string</h1>
+	<input id = "a">
+	<input id = "b">
+	<button type="button" onclick ="w()">Search</button>
+	<p id = "x"></p>
+	<script type="text/javascript">
+		function w() {
+			var y = document.getElementById("a").value;
+			var w = document.getElementById("b").value;
+			var p = y.indexOf("w");
+			var n = y.length;
+			var m = "";
+			if (p == -1){
+				document.getElementById("x").innerHTML = "There is no occurrence of letter " +w;
+			}
+			else {
+				m += "The occurrence of the letter "+ w + " is "+ p +"<hr>";
+				while (p < n){
+					q = p + 1;
+					p = y.indexOf("w", q);
+					m += "The occurrence of the letter "+ w + " is "+ p +"<hr>";
+				}
+				document.getElementById("x").innerHTML = m
+			}
+		}
+	</script>
+</body>
+</html>

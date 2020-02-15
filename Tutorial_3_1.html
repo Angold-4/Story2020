@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 3.1</title>
+</head>
+<body>
+	<p>Please Notice That The Password Should Be Of 6-8 Characters In Length!</p>
+	<button onclick="c()">Change Your password</button>
+	<p id = "w"></p>
+	<p id = 'e'></p>
+	<script type="text/javascript">
+		function c() {
+			do{
+				var password = prompt("Enter a new password with 6-8 chars:");
+				var n = password.length;}
+			while(n < 6 || n > 8);
+				var passwords = prompt("Confirm your password again:");
+			    if (passwords == password){
+				    document.getElementById('w').innerHTML = "Your password has been changed successfully!";
+			    }
+			    else {
+				    document.getElementById('w').innerHTML = "Sorry, your password has not been changed.";
+			    }
+		}
+	</script>
+</body>
+</html>

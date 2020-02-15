@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 3.2</title>
+</head>
+<body>
+	<p>Please enter a string freely!</p>
+	<form oninput="l()">
+	    <input type="text" id="a">
+	</form>
+	<p id ="s"></p> 
+	<script type="text/javascript">
+		function l() {
+			var n = document.getElementById('a').value;
+			var m = "";
+			var p = n.length;
+			for(var i = 0; i < p; i ++){
+				var char = n.charAt(i);
+				m += "The character at index " + i + " is " + char + "<hr>";}
+			document.getElementById('s').innerHTML = m;}	
+	</script>	
+</body>
+</html>

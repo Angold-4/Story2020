@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 3.4</title>
+</head>
+<body>
+	<h1>Please enter the height of the triangle:</h1>
+	<form oninput="g()">
+	    <input type="number" name="a" id = "a">
+	</form>
+	<p id ="b"></p>
+	<script type="text/javascript">
+		function g() {
+			var h = document.getElementById("a").value;
+			var i;
+			var j;
+			var x = "";
+			for (i = 0;i < h; i++){
+				for(j = 0;j < h - i; j++){
+					x += "*"
+				}
+				x += "<hr>"
+			} 
+			document.getElementById("b").innerHTML = x;
+		}
+	</script>	
+</body>
+</html>

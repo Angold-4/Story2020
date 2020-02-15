@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 3.1.5</title>
+</head>
+<body>
+	<p id  = 'w'></p>
+	<script type="text/javascript">
+		var password = prompt('Enter here:')
+		var n = password.length;
+		document.write('The length of your password is:' +n)
+		document.getElementById('w').innerHTML = (n <= 3 && n >= 1);
+	</script>
+
+
+</body>
+</html>

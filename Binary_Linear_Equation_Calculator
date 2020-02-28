@@ -66,6 +66,6 @@ def quadraticRoots(fuc):
 if __name__ == '__main__':
     #print(quadraticRoots("-1x**2+3x+4=0"))
     print("Binary Linear Equation Calculator")
-    print("If the coefficient of x**2 is negative. Please put a '-' in front of it")
+    print("If the coefficient of x**2 is positive. Please put a '+' in front of it")
     k = input("Please enter your function:")
     print("The anwer is: ",quadraticRoots(k))

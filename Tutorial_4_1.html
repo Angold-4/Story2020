@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial 4.1</title>
+</head>
+<body>
+	<p id = "a"></p>
+	<script type="text/javascript">
+		var nos = prompt("How many students do you have?");
+		var points = [];
+		var i;
+		for(i = 0;i < nos; i ++){
+			var pos = prompt("Please enter the student mark:");
+			points[i] = pos;
+		}
+		w();
+	function w(){
+		var leng = points.length;
+		var l;
+		var max = 0;
+		var p;
+		var total = 0;
+		var g;
+		var min = 10000000;
+		for(l = 0;l < leng; l ++){
+			if(points[l] >= max){
+				max = points[l]
+			}
+		}
+		for(p = 0;p < leng; p ++){
+			if(points[p] < min){
+				min = points[p];
+			}
+		}
+		for(g = 0;g < leng; g ++){
+			total += parseFloat(points[g]);
+		}
+		t = parseFloat(total)
+		lengt = parseFloat(leng)
+		average = t / lengt;
+		document.getElementById('a').innerHTML = "The maximum number is: " + max + "<br>" + "The minimum number is: " + min + "<br>" + "The average is: " + average;
+	}
+	</script>				
+</body>
+</html>

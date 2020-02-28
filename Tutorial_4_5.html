@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial.4.5</title>
+</head>
+<body>
+	<p id ="a"></p>
+	<p id ="b"></p>
+	<script type="text/javascript">
+		var numbers = [];//create an 100 random integer array
+		var i;
+		for(i = 0; i < 99; i ++){
+			var r = Math.floor(Math.random() * 100)
+			numbers[i] = r 
+		}
+		var len = numbers.length
+		var l;
+		var location = '';
+		var d = prompt("Please enter a number that you want to find:")
+		var s;
+		for(l = 0;l < len;l ++){
+			s = numbers[l];
+			if(s == d){
+				location += "The number:" + d + "is in: "+ l +"<br>"
+			}
+		}
+		document.getElementById('a').innerHTML = numbers;
+		document.getElementById('b').innerHTML = location;
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial.4.3</title>
+</head>
+<body>
+	<p id = "a"></p>
+	<script type="text/javascript">
+		var h = prompt("Please enter the height of your cube:")
+		function cube() {
+			var cube = "";
+			var f;
+			for(f = 0;f < h;f ++){
+				cube += "*"
+			}
+			cube += "<br>"
+			var s;
+			for(s = 0;s < h - 2;s ++){
+				var i;
+				for(i = 0;i < h;i ++){
+					if(i == 0 || i == h - 1){
+						cube += "*";}
+
+					else{
+						cube += " ";
+					}
+				}
+				cube += "<br>"
+			}
+			var last;
+			for(last = 0;last < h;last ++){
+				cube += "*"
+			}
+			cube += "<br>"
+			document.getElementById('a').innerHTML = cube;
+	    }
+
+		cube()
+	</script>
+
+	
+</body>
+</html>

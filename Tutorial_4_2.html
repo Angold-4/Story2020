@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial.4.2</title>
+</head>
+<body>
+	<p id = "a"></p>
+	<script type="text/javascript">
+		var h = prompt("Please enter the size of your cube:")
+		var l;
+		for(l = 0;l < h; l ++){
+			var b = "";
+			var c;
+			for(c = 0;c <h;c ++){
+				b += "*"
+			}
+			b += "<br>"
+		}
+		document.getElementById('a').innerHTML = b;
+	</script>
+</body>
+</html>

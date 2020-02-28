@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tutorial.4.4</title>
+</head>
+<body>
+	<p id = 'a'></p>
+	<script type="text/javascript">
+		function integerpower(base,exponent){
+			var end = base;
+			var i;
+			for(i = 0;i < exponent - 1;i ++){
+				end = end * base;
+			}
+			return end;
+		}
+		document.write(integerpower( 3, 4 ));
+	</script>
+	
+	
+</body>
+</html>

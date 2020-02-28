@@ -1,0 +1,71 @@
+import re
+import math
+def quadraticRoots(fuc):
+	num = re.findall(r"\d+\.?\d*",fuc)
+	l = 0
+	global t
+	global y
+	global u
+	for i in num:
+		if l == 0:
+			t = i
+		elif l == 1:
+			h = i
+		elif l == 2:
+			y = i
+		elif l == 3:
+			u = i
+		else:
+			d = i
+		l = l + 1
+	a = float(t)
+	b = float(y)
+	c = float(u)
+	lis = list(fuc)
+	q = 0
+	pl = 0
+	qu = 0
+	fi = 0
+	bu = 0
+	for p in lis:
+		if p == "+":
+			pl += 1
+			fi = q
+		elif p == "-":
+			if q == 0:
+				a = -1*a
+			else:
+				qu += 1
+				bu = q
+
+		else:
+			sp = q
+		q = q + 1
+	plu = int(pl)
+	qur = int(qu)
+	if plu - qur == -2:
+		b = -1*b
+		c = -1*c
+	elif plu - qur == 0:
+		if fi < bu:
+			c = -1*c
+		elif fi > bu:
+			b = -1*b
+		else:
+			wange = "super"
+
+	s = math.sqrt(b**2 - 4*a*c)
+	m = -1*b
+	n = 2*a
+	x1 = (m + s)/n
+	x2 = (m - s)/n
+	#print(num)
+	#print(a,b,c)
+	return (x1,x2)
+    
+if __name__ == '__main__':
+    #print(quadraticRoots("-1x**2+3x+4=0"))
+    print("Binary Linear Equation Calculator")
+    print("If the coefficient of x**2 is negative. Please put a '-' in front of it")
+    k = input("Please enter your function:")
+    print("The anwer is: ",quadraticRoots(k))
